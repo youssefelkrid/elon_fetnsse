@@ -551,3 +551,52 @@ button:focus-visible {
   width: auto;
   display: block;
 }
+
+
+
+
+/* ===== RESPONSIVE : écrans de 768px et moins (téléphones) ===== */
+@media (max-width: 768px) {
+
+  /* 1) Les blocs placés côte à côte passent les uns sous les autres */
+  .hero-contenu,
+  .apropos-contenu,
+  .contact-contenu,
+  .cartes,
+  .chiffres,
+  .valeurs,
+  .champs-ligne,
+  .pied-haut,
+  .pied-bas {
+    flex-direction: column;
+  }
+
+  /* 2) Le menu passe a la ligne s'il manque de place */
+  .menu {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  /* 3) L'en-tête s'agrandit au lieu d'avoir une hauteur fixe */
+  .en-tete-contenu {
+    height: auto;
+    flex-direction: column;
+    padding: 12px 24px;
+  }
+
+  /* 4) Titres et espacements plus petits */
+  .hero-texte h1 {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  /* 5) Le séparateur entre les chiffres devient horizontal */
+  .chiffre + .chiffre {
+    border-left: none;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 16px;
+  }
+}
